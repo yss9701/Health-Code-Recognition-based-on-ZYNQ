@@ -24,4 +24,5 @@
 Boot_file为利用Petalinux生成的引导文件BOOT.bin与image.ub。image为识别结果图片。RGB_GaussianBlur_HLS为HLS工程，主要为彩色图像的分层滤波。Vivado_project为整个系统的Vivado工程。main.cc为二维码识别程序，包括摄像头数据读入，图像处理，二维码内容识别、定位与颜色识别，LCD图像显示。
 
 3.硬件设备
+
 板卡为正点原子领航者ZYNQ7020开发板，摄像头为OV5640，LCD为800*480分辨率，Vivado、HLS、Xilinx SDK、Petalinux均为2018.3，根文件系统为PYNQ v2.5。
