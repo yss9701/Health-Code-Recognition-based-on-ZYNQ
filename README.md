@@ -1,5 +1,6 @@
 # Health-Code-Recognition-based-on-ZYNQ
 2020年新工科联盟-Xilinx暑期学校（Summer School）项目
+杨舒盛  易思静  赵杰
 
 1.设计概述
 
