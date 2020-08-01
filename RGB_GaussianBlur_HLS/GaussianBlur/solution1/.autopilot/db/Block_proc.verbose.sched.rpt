@@ -1,0 +1,113 @@
+
+
+================================================================
+== Vivado HLS Report for 'Block_proc'
+================================================================
+* Date:           Fri Jul 31 10:05:02 2020
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        gray_filter
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg400-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     3.401|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    0|    0|    0|    0|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 0
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.40>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i11* %img_1_cols_V_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str295, i32 0, i32 0, [1 x i8]* @p_str296, [1 x i8]* @p_str297, [1 x i8]* @p_str298, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str299, [1 x i8]* @p_str300)"   --->   Operation 2 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i10* %img_1_rows_V_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str289, i32 0, i32 0, [1 x i8]* @p_str290, [1 x i8]* @p_str291, [1 x i8]* @p_str292, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str293, [1 x i8]* @p_str294)"   --->   Operation 3 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i11* %img_0_cols_V_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str283, i32 0, i32 0, [1 x i8]* @p_str284, [1 x i8]* @p_str285, [1 x i8]* @p_str286, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str287, [1 x i8]* @p_str288)"   --->   Operation 4 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i10* %img_0_rows_V_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str277, i32 0, i32 0, [1 x i8]* @p_str278, [1 x i8]* @p_str279, [1 x i8]* @p_str280, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str281, [1 x i8]* @p_str282)"   --->   Operation 5 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (3.40ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i10P(i10* %img_0_rows_V_out, i10 480)" [D:/zynq_zhengdian/Vivado/2018.3/common/technology/autopilot/hls/hls_video_core.h:656->D:/zynq_zhengdian/Vivado/2018.3/common/technology/autopilot/hls/hls_video_core.h:642->D:/zynq_zhengdian/Vivado/2018.3/common/technology/autopilot/hls/hls_video_core.h:643->gray_filter/src/ov5640_rgb2gray.cpp:20]   --->   Operation 6 'write' <Predicate = true> <Delay = 3.40> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 2> <FIFO>
+ST_1 : Operation 7 [1/1] (3.40ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i11P(i11* %img_0_cols_V_out, i11 800)" [D:/zynq_zhengdian/Vivado/2018.3/common/technology/autopilot/hls/hls_video_core.h:657->D:/zynq_zhengdian/Vivado/2018.3/common/technology/autopilot/hls/hls_video_core.h:642->D:/zynq_zhengdian/Vivado/2018.3/common/technology/autopilot/hls/hls_video_core.h:643->gray_filter/src/ov5640_rgb2gray.cpp:20]   --->   Operation 7 'write' <Predicate = true> <Delay = 3.40> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 2> <FIFO>
+ST_1 : Operation 8 [1/1] (3.40ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i10P(i10* %img_1_rows_V_out, i10 480)" [D:/zynq_zhengdian/Vivado/2018.3/common/technology/autopilot/hls/hls_video_core.h:656->D:/zynq_zhengdian/Vivado/2018.3/common/technology/autopilot/hls/hls_video_core.h:642->D:/zynq_zhengdian/Vivado/2018.3/common/technology/autopilot/hls/hls_video_core.h:643->gray_filter/src/ov5640_rgb2gray.cpp:27]   --->   Operation 8 'write' <Predicate = true> <Delay = 3.40> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 2> <FIFO>
+ST_1 : Operation 9 [1/1] (3.40ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i11P(i11* %img_1_cols_V_out, i11 800)" [D:/zynq_zhengdian/Vivado/2018.3/common/technology/autopilot/hls/hls_video_core.h:657->D:/zynq_zhengdian/Vivado/2018.3/common/technology/autopilot/hls/hls_video_core.h:642->D:/zynq_zhengdian/Vivado/2018.3/common/technology/autopilot/hls/hls_video_core.h:643->gray_filter/src/ov5640_rgb2gray.cpp:27]   --->   Operation 9 'write' <Predicate = true> <Delay = 3.40> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 2> <FIFO>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "ret void"   --->   Operation 10 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 3.4ns
+The critical path consists of the following:
+	fifo write on port 'img_0_rows_V_out' (D:/zynq_zhengdian/Vivado/2018.3/common/technology/autopilot/hls/hls_video_core.h:656->D:/zynq_zhengdian/Vivado/2018.3/common/technology/autopilot/hls/hls_video_core.h:642->D:/zynq_zhengdian/Vivado/2018.3/common/technology/autopilot/hls/hls_video_core.h:643->gray_filter/src/ov5640_rgb2gray.cpp:20) [9]  (3.4 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

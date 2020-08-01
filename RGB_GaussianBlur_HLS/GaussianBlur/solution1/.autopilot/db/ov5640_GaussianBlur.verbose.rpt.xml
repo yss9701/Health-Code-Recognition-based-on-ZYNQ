@@ -1,0 +1,157 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'ov5640_GaussianBlur'" level="0">
+<item name = "Date">Fri Jul 31 10:05:16 2020
+</item>
+<item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
+<item name = "Project">gray_filter</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020clg400-2</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 10.674, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">388981, 388981, 388977, 388977, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="GaussianBlur162_U0">GaussianBlur162, 388976, 388976, 388976, 388976, none</column>
+<column name="GaussianBlur163_U0">GaussianBlur163, 388976, 388976, 388976, 388976, none</column>
+<column name="GaussianBlur_U0">GaussianBlur, 388976, 388976, 388976, 388976, none</column>
+<column name="AXIvideo2Mat_U0">AXIvideo2Mat, 3, 386403, 3, 386403, none</column>
+<column name="Mat2AXIvideo_U0">Mat2AXIvideo, 1, 385921, 1, 385921, none</column>
+<column name="Merge_U0">Merge, 1, 385441, 1, 385441, none</column>
+<column name="Split_U0">Split, 1, 385441, 1, 385441, none</column>
+<column name="Block_proc_U0">Block_proc, 0, 0, 0, 0, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, 0, 1</column>
+<column name="FIFO">0, -, 100, 420</column>
+<column name="Instance">9, 12, 2261, 2844</column>
+<column name="Memory">-, -, -, -</column>
+<column name="Multiplexer">-, -, -, -</column>
+<column name="Register">-, -, -, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
+<specialColumn name="Utilization (%)">3, 5, 2, 6</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="AXIvideo2Mat_U0">AXIvideo2Mat, 0, 0, 391, 217</column>
+<column name="Block_proc_U0">Block_proc, 0, 0, 3, 19</column>
+<column name="GaussianBlur_U0">GaussianBlur, 3, 4, 416, 701</column>
+<column name="GaussianBlur162_U0">GaussianBlur162, 3, 4, 416, 701</column>
+<column name="GaussianBlur163_U0">GaussianBlur163, 3, 4, 416, 701</column>
+<column name="Mat2AXIvideo_U0">Mat2AXIvideo, 0, 0, 281, 223</column>
+<column name="Merge_U0">Merge, 0, 0, 169, 144</column>
+<column name="Split_U0">Split, 0, 0, 169, 138</column>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+<column name="img_0_cols_V_c21_U">0, 5, 23, 2, 11, 22</column>
+<column name="img_0_cols_V_c_U">0, 5, 23, 2, 11, 22</column>
+<column name="img_0_data_stream_0_U">0, 5, 20, 2, 8, 16</column>
+<column name="img_0_data_stream_1_U">0, 5, 20, 2, 8, 16</column>
+<column name="img_0_data_stream_2_U">0, 5, 20, 2, 8, 16</column>
+<column name="img_0_rows_V_c20_U">0, 5, 22, 2, 10, 20</column>
+<column name="img_0_rows_V_c_U">0, 5, 22, 2, 10, 20</column>
+<column name="img_1_cols_V_c23_U">0, 5, 23, 2, 11, 22</column>
+<column name="img_1_cols_V_c_U">0, 5, 23, 5, 11, 55</column>
+<column name="img_1_data_stream_0_U">0, 5, 20, 2, 8, 16</column>
+<column name="img_1_data_stream_1_U">0, 5, 20, 2, 8, 16</column>
+<column name="img_1_data_stream_2_U">0, 5, 20, 2, 8, 16</column>
+<column name="img_1_rows_V_c22_U">0, 5, 22, 2, 10, 20</column>
+<column name="img_1_rows_V_c_U">0, 5, 22, 5, 10, 50</column>
+<column name="img_B_data_stream_0_U">0, 5, 20, 2, 8, 16</column>
+<column name="img_B_f_data_stream_s_U">0, 5, 20, 2, 8, 16</column>
+<column name="img_G_data_stream_0_U">0, 5, 20, 2, 8, 16</column>
+<column name="img_G_f_data_stream_s_U">0, 5, 20, 2, 8, 16</column>
+<column name="img_R_data_stream_0_U">0, 5, 20, 2, 8, 16</column>
+<column name="img_R_f_data_stream_s_U">0, 5, 20, 2, 8, 16</column>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="Split_U0_start_full_n">and, 0, 0, 1, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="INPUT_STREAM_TDATA">in, 24, axis, INPUT_STREAM_V_data_V, pointer</column>
+<column name="INPUT_STREAM_TKEEP">in, 3, axis, INPUT_STREAM_V_keep_V, pointer</column>
+<column name="INPUT_STREAM_TSTRB">in, 3, axis, INPUT_STREAM_V_strb_V, pointer</column>
+<column name="INPUT_STREAM_TUSER">in, 1, axis, INPUT_STREAM_V_user_V, pointer</column>
+<column name="INPUT_STREAM_TLAST">in, 1, axis, INPUT_STREAM_V_last_V, pointer</column>
+<column name="INPUT_STREAM_TID">in, 1, axis, INPUT_STREAM_V_id_V, pointer</column>
+<column name="INPUT_STREAM_TDEST">in, 1, axis, INPUT_STREAM_V_dest_V, pointer</column>
+<column name="INPUT_STREAM_TVALID">in, 1, axis, INPUT_STREAM_V_dest_V, pointer</column>
+<column name="INPUT_STREAM_TREADY">out, 1, axis, INPUT_STREAM_V_dest_V, pointer</column>
+<column name="OUTPUT_STREAM_TDATA">out, 24, axis, OUTPUT_STREAM_V_data_V, pointer</column>
+<column name="OUTPUT_STREAM_TKEEP">out, 3, axis, OUTPUT_STREAM_V_keep_V, pointer</column>
+<column name="OUTPUT_STREAM_TSTRB">out, 3, axis, OUTPUT_STREAM_V_strb_V, pointer</column>
+<column name="OUTPUT_STREAM_TUSER">out, 1, axis, OUTPUT_STREAM_V_user_V, pointer</column>
+<column name="OUTPUT_STREAM_TLAST">out, 1, axis, OUTPUT_STREAM_V_last_V, pointer</column>
+<column name="OUTPUT_STREAM_TID">out, 1, axis, OUTPUT_STREAM_V_id_V, pointer</column>
+<column name="OUTPUT_STREAM_TDEST">out, 1, axis, OUTPUT_STREAM_V_dest_V, pointer</column>
+<column name="OUTPUT_STREAM_TVALID">out, 1, axis, OUTPUT_STREAM_V_dest_V, pointer</column>
+<column name="OUTPUT_STREAM_TREADY">in, 1, axis, OUTPUT_STREAM_V_dest_V, pointer</column>
+<column name="ap_clk">in, 1, ap_ctrl_none, ov5640_GaussianBlur, return value</column>
+<column name="ap_rst_n">in, 1, ap_ctrl_none, ov5640_GaussianBlur, return value</column>
+</table>
+</item>
+</section>
+</profile>
